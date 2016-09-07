@@ -1,0 +1,1 @@
+AdminControl.invoke('WebSphere:name=DataSourceCfgHelper,process=server1,platform=dynamicproxy,node=WC_cve_node,version=7.0.0.13,type=DataSourceCfgHelper,mbeanIdentifier=DataSourceCfgHelper,cell=prd1Cell01,spec=1.0', 'testConnection', '[cells/prd1Cell01/nodes/WC_cve_node/servers/server1|resources.xml#DataSource_1303710679705]', '[java.lang.String]')
