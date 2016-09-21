@@ -8,7 +8,11 @@
 
 # Note str.capitalize() only caps the first letter in the string.
 # str.upper() caps the whole string.
+<<<<<<< HEAD
 # testing 2
+=======
+# test
+>>>>>>> 1dfa56d4bc97d103d79c0e58c0c44f82da44c4e0
 
 
 while True:
