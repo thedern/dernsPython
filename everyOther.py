@@ -12,9 +12,9 @@ def string_bits(str):
     x = 0
     new = ""
     while x < n:
-	print str[x]
-	x += 2
-        print str[x]
+		print str[x]
+		x += 2
+      #  print str[x]
 	
 string_bits('Hello')
 	
