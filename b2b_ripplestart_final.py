@@ -5,8 +5,9 @@
 # command.  Must be executed as wasuser2.
 
 import sys
-
-#-----------------------------------
+import time
+from time import strftime
+# -----------------------------------
 
 
 def logger(x):
@@ -14,11 +15,11 @@ def logger(x):
     logfile.write(x)
     logfile.close()
 
-#-----------------------------------
+# -----------------------------------
 
 # timestamp
-import time
-from time import strftime
+
+
 now = strftime("%Y-%m-%d %H:%M:%S")
 formatNow = now + "\n"
 logger(formatNow)
