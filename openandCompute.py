@@ -8,7 +8,7 @@
 
 # Note str.capitalize() only caps the first letter in the string.
 # str.upper() caps the whole string.
-# testing
+# testing 2
 
 
 while True:
