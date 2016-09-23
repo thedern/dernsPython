@@ -1,4 +1,5 @@
-# Takes a list of hosts via text file and produces the IP addresses
+# Takes a list of hosts via text file and produces the IP addresses in a new
+# file
 import socket
 from sys import argv
 
