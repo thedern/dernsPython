@@ -1,8 +1,18 @@
 # Takes a list of hosts via text file and produces the IP addresses
 import socket
+from sys import argv
 
-infile = open('hostList.txt')
-outfile = open('hostIPMap.txt', 'w')
+script, hostlistFile, hostIPlistFile = argv
+
+if len(argv) == 0:
+    # Print useage
+    print "useage is scriptname inputfile outputfile"
+    exit()
+else:
+    pass
+
+infile = open(hostlistFile)
+outfile = open(hostIPlistFile, 'w')
 # truncate to nsure we are creating a fresh file
 outfile.truncate()
 
