@@ -1,17 +1,13 @@
 # Takes a list of hosts via text file and produces the IP addresses in a new
 # file.
+
+
 try:
     import socket
+    import sys
     from sys import argv
 
     script, hostlistFile, hostIPlistFile = argv
-
-    if len(argv) == 0:
-        # Print useage
-        print "useage is scriptname inputfile outputfile"
-        exit()
-    else:
-        pass
 
     infile = open(hostlistFile)
     outfile = open(hostIPlistFile, 'w')
@@ -48,7 +44,16 @@ try:
         z = "\n %s \t %s" % (i, hostIP[i])
         print z
         outfile.write(z)
-except:
+
+except ValueError:
     if len(argv) != 3:
-        print """you messed up, usage is <scriptname>
-                  <infile name> <outfile> name"""
+        print """you messed up, usage is <scriptname> <infile name> <outfile name>"""
+
+except IOError as e:
+	#pretty print the IO error message, tells one which file does not exist
+	print e
+	print "Please recheck your input"
+
+except:
+    print "Unexpected error:", sys.exc_info()[0]
+    #raise
