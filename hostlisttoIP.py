@@ -20,6 +20,7 @@ try:
     def getIP(hostname):
         global hostIP
         try:
+	    # use socket to get IPv4 address for hostname
             ipaddr = socket.gethostbyname(hostname)
             # update global dictionary
             hostIP[hostname] = [ipaddr]
