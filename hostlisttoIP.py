@@ -20,7 +20,7 @@ try:
     def getIP(hostname):
         global hostIP
         try:
-	    # use socket to get IPv4 address for hostname
+            # use socket to get IPv4 address for hostname
             ipaddr = socket.gethostbyname(hostname)
             # update global dictionary
             hostIP[hostname] = [ipaddr]
@@ -48,13 +48,13 @@ try:
 
 except ValueError:
     if len(argv) != 3:
-        print """you messed up, usage is <scriptname> <infile name> <outfile name>"""
+        print "error usage is <scriptname> <infile name> <outfile name>"
 
 except IOError as e:
-	#pretty print the IO error message, tells one which file does not exist
-	print e
-	print "Please recheck your input"
+    # pretty print the IO error message, tells one which file does not exist
+    print e
+    print "Please recheck your input"
 
 except:
     print "Unexpected error:", sys.exc_info()[0]
-    #raise
+    # raise
